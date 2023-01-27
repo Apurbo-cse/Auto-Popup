@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>Automatic PopupX</title>
+     <!--Google Fonts-->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <!--Stylesheets-->
+     <style media="screen">
+          .popupX {
+               background-color: #ffffff;
+               width: 500px;
+               position: absolute;
+               transform: translate(-50%, -50%);
+               left: 50%;
+               top: 50%;
+               border-radius: 8px;
+               font-family: "Poppins", sans-serif;
+               display: none;
+               text-align: center;
+               z-index: 1;
+               margin: 0px;
+               padding: 0px;
+          }
+
+          .popupX button {
+               background-color: transparent;
+               font-size: 30px;
+               background: #df8c1067;
+               position: absolute;
+               border-radius: 100%;
+               width: 40px;
+               height: 40px;
+               border: none;
+               right: 0px;
+               outline: none;
+               cursor: pointer;
+          }
+
+          .popupX button:hover {
+               background: #df8c10;
+          }
+
+          .popupX img {
+               width: 500px;
+               border-radius: 5px;
+          }
+
+     </style>
+</head>
+
+<body>
+     <div class="popupX">
+          <button id="close">&times;</button>
+          <img src="https://pallicraftsltd.com/assets/frontend/img/frankfurt.jpg" alt="">
+     </div>
+     <!--Script-->
+     <script type="text/javascript">
+          window.addEventListener("load", function () {
+               setTimeout(
+                    function open(event) {
+                         document.querySelector(".popupX").style.display = "block";
+                    },
+                    2000
+               )
+          });
+
+          document.querySelector("#close").addEventListener("click", function () {
+               document.querySelector(".popupX").style.display = "none";
+          });
+     </script>
+</body>
+
+</html>
